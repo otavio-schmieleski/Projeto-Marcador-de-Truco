@@ -21,6 +21,8 @@ public class Marcador_de_Truco extends Application {
         Parent root = FXMLLoader.load(url);
         Scene scene = new Scene(root);
         primaryStage.setScene(scene);
+        primaryStage.setMaxWidth(275);
+        primaryStage.setMaxHeight(600);
         primaryStage.show();
     }
 
