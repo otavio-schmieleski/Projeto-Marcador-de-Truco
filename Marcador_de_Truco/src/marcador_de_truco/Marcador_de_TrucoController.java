@@ -74,6 +74,17 @@ public class Marcador_de_TrucoController implements Initializable {
                 
                 btn_truco.setText("TRUCO ("+truco+")");
                 
+            }else if ((pontuacao_J1 == 12) || (pontuacao_J1 > 12)){
+                
+                    pontuacao_J1 = 0;
+                    pontos_J1.setText(Integer.toString(pontuacao_J1));
+
+                    pontuacao_J2 = 0;
+                    pontos_J2.setText(Integer.toString(pontuacao_J2));
+
+                    pontos_vitorias_J1 += 1;
+                    vitorias_J1.setText(Integer.toString(pontos_vitorias_J1));
+                    
             }else{
                 pontuacao_J1 += 1;
                 pontos_J1.setText(Integer.toString(pontuacao_J1));
@@ -97,6 +108,18 @@ public class Marcador_de_TrucoController implements Initializable {
 
                     pontos_vitorias_J2 += 1;
                     vitorias_J2.setText(Integer.toString(pontos_vitorias_J2));
+                    
+                }else if ((pontuacao_J2 == 12) || (pontuacao_J2 > 12)){
+                
+                    pontuacao_J2 = 0;
+                    pontos_J2.setText(Integer.toString(pontuacao_J2));
+
+                    pontuacao_J1 = 0;
+                    pontos_J1.setText(Integer.toString(pontuacao_J1));
+
+                    pontos_vitorias_J2 += 1;
+                    vitorias_J2.setText(Integer.toString(pontos_vitorias_J2));
+                    
                 }else{
                     pontos_J2.setText(Integer.toString(pontuacao_J2));
                 }
